@@ -31,7 +31,7 @@
     "recompose": "^0.22.0"
   },
   "peerDependencies": {
-    "react": "^15.3.0 || ^16.0.0-alpha"
+    "react": "^15.3.0"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
