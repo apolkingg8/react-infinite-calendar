@@ -2,7 +2,7 @@
   "name": "react-infinite-calendar",
   "version": "2.3.1",
   "description": "Infinite scrolling date-picker built with React, with localization, themes, keyboard support, and more.",
-  "main": "src/index.js",
+  "main": "es/index.js",
   "files": [
     "css",
     "es",
