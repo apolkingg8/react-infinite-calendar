@@ -1,6 +1,9 @@
+@import "../variables";
+
 .root {
   width: 100% !important;
-  background-color: #FFF;
+  //background-color: #FFF;
+  background-color: $bgColor;
   -webkit-overflow-scrolling: touch;
 
   &.scrolling {
