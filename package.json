@@ -11,7 +11,7 @@
     "styles.css"
   ],
   "scripts": {
-    "build": "npm run clean && nwb build-react-component --no-vendor",
+    "build": "npm run clean && nwb build-react-component --no-vendor --force",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
     "storybook": "start-storybook -p 9001 -c .storybook",
