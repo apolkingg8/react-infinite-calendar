@@ -35,7 +35,8 @@ var MonthList = function (_Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
-      scrollTop: _this.getDateOffset(_this.props.scrollDate)
+      //scrollTop: this.getDateOffset(this.props.scrollDate),
+      scrollTop: _this.getDateOffset(new Date())
     }, _this.cache = {}, _this.memoize = function (param) {
       if (!this.cache[param]) {
         var weekStartsOn = this.props.locale.weekStartsOn;
@@ -162,13 +163,13 @@ var MonthList = function (_Component) {
   };
 
   MonthList.prototype.componentWillReceiveProps = function componentWillReceiveProps(_ref2) {
-    var scrollDate = _ref2.scrollDate;
-
-    if (scrollDate !== this.props.scrollDate) {
+    /*if (scrollDate !== this.props.scrollDate) {
       this.setState({
-        scrollTop: this.getDateOffset(scrollDate)
+        scrollTop: this.getDateOffset(scrollDate),
       });
-    }
+    }*/
+
+    var scrollDate = _ref2.scrollDate;
   };
 
   MonthList.prototype.getDateOffset = function getDateOffset(date) {

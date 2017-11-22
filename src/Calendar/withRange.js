@@ -41,7 +41,7 @@ export const enhanceDay = withPropsOnChange(['selected'], ({date, selected, them
 // Enhancer to handle selecting and displaying multiple dates
 export const withRange = compose(
   withDefaultProps,
-  //withState('scrollDate', 'setScrollDate', getInitialDate),
+  withState('scrollDate', 'setScrollDate', getInitialDate),
   withState('displayKey', 'setDisplayKey', getInitialDate),
   withState('selectionStart', 'setSelectionStart', null),
   withImmutableProps(({
