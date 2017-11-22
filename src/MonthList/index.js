@@ -38,7 +38,8 @@ export default class MonthList extends Component {
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   };
   state = {
-    scrollTop: this.getDateOffset(this.props.scrollDate),
+    //scrollTop: this.getDateOffset(this.props.scrollDate),
+    scrollTop: this.getDateOffset(new Date()),
   };
   cache = {};
   memoize = function(param) {
@@ -71,11 +72,11 @@ export default class MonthList extends Component {
   }
 
   componentWillReceiveProps({scrollDate}) {
-    if (scrollDate !== this.props.scrollDate) {
+    /*if (scrollDate !== this.props.scrollDate) {
       this.setState({
         scrollTop: this.getDateOffset(scrollDate),
       });
-    }
+    }*/
   }
 
   getDateOffset(date) {
