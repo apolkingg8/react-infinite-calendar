@@ -18,7 +18,7 @@ const enhanceYears = withProps(({displayDate}) => ({
 // Enhancer to handle selecting and displaying multiple dates
 export const withMultipleDates = compose(
   withDefaultProps,
-  //withState('scrollDate', 'setScrollDate', getInitialDate),
+  withState('scrollDate', 'setScrollDate', getInitialDate),
   withState('displayDate', 'setDisplayDate', getInitialDate),
   withImmutableProps(({
     DayComponent,
