@@ -27,7 +27,9 @@ var enhanceYears = _withProps(function (_ref) {
 });
 
 // Enhancer to handle selecting and displaying multiple dates
-var withMultipleDates = _compose(withDefaultProps, _withState('scrollDate', 'setScrollDate', getInitialDate), _withState('displayDate', 'setDisplayDate', getInitialDate), withImmutableProps(function (_ref2) {
+var withMultipleDates = _compose(withDefaultProps,
+//withState('scrollDate', 'setScrollDate', getInitialDate),
+_withState('displayDate', 'setDisplayDate', getInitialDate), withImmutableProps(function (_ref2) {
   var DayComponent = _ref2.DayComponent,
       HeaderComponent = _ref2.HeaderComponent,
       YearsComponent = _ref2.YearsComponent;
