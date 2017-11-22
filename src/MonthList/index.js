@@ -38,8 +38,7 @@ export default class MonthList extends Component {
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   };
   state = {
-    //scrollTop: this.getDateOffset(this.props.scrollDate),
-    scrollTop: this.getDateOffset(new Date()),
+    scrollTop: this.getDateOffset(this.props.scrollDate),
   };
   cache = {};
   memoize = function(param) {
