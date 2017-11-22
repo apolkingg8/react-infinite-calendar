@@ -71,11 +71,11 @@ export default class MonthList extends Component {
   }
 
   componentWillReceiveProps({scrollDate}) {
-    /*if (scrollDate !== this.props.scrollDate) {
+    if (scrollDate !== this.props.scrollDate) {
       this.setState({
         scrollTop: this.getDateOffset(scrollDate),
       });
-    }*/
+    }
   }
 
   getDateOffset(date) {

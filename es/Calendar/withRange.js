@@ -62,9 +62,7 @@ export var enhanceDay = _withPropsOnChange(['selected'], function (_ref) {
 });
 
 // Enhancer to handle selecting and displaying multiple dates
-var withRange = _compose(withDefaultProps,
-//withState('scrollDate', 'setScrollDate', getInitialDate),
-_withState('displayKey', 'setDisplayKey', getInitialDate), _withState('selectionStart', 'setSelectionStart', null), withImmutableProps(function (_ref2) {
+var withRange = _compose(withDefaultProps, _withState('scrollDate', 'setScrollDate', getInitialDate), _withState('displayKey', 'setDisplayKey', getInitialDate), _withState('selectionStart', 'setSelectionStart', null), withImmutableProps(function (_ref2) {
   var DayComponent = _ref2.DayComponent,
       HeaderComponent = _ref2.HeaderComponent,
       YearsComponent = _ref2.YearsComponent;
