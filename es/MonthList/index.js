@@ -35,7 +35,7 @@ var MonthList = function (_Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
-            scrollTop: 0
+            scrollTop: _this.getDateOffset(_this.props.scrollDate)
         }, _this.cache = {}, _this.memoize = function (param) {
             if (!this.cache[param]) {
                 var weekStartsOn = this.props.locale.weekStartsOn;
@@ -156,13 +156,6 @@ var MonthList = function (_Component) {
             }, passThrough.Month));
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
-
-    MonthList.prototype.componentWillMount = function componentWillMount() {
-        //console.log('month list will mount')
-        this.setState({
-            scrollTop: this.getDateOffset(this.props.scrollDate)
-        });
-    };
 
     MonthList.prototype.componentDidMount = function componentDidMount() {
         this.scrollEl = this.VirtualList.rootNode;
