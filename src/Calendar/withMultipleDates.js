@@ -43,7 +43,7 @@ export const withMultipleDates = compose(
         selected: displayDate,
       },
     },
-    selected: props.selected
+    selected: props.selected && props.selected
       .filter(date => sanitizeDate(date, props))
       .map(date => format(date, 'YYYY-MM-DD')),
   })),

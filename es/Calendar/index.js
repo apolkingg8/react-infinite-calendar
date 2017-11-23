@@ -207,6 +207,10 @@ var Calendar = function (_Component) {
     return _this;
   }
 
+  Calendar.prototype.componentWillMount = function componentWillMount() {
+    //console.log('calendar will mount')
+  };
+
   Calendar.prototype.componentDidMount = function componentDidMount() {
     var autoFocus = this.props.autoFocus;
 

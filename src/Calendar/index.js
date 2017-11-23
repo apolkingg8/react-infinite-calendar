@@ -112,6 +112,9 @@ export default class Calendar extends Component {
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     YearsComponent: PropTypes.func,
   };
+  componentWillMount() {
+    //console.log('calendar will mount')
+  }
   componentDidMount() {
     let {autoFocus} = this.props;
 

@@ -61,7 +61,7 @@ var withMultipleDates = _compose(withDefaultProps, _withState('scrollDate', 'set
         selected: displayDate
       }
     },
-    selected: props.selected.filter(function (date) {
+    selected: props.selected && props.selected.filter(function (date) {
       return sanitizeDate(date, props);
     }).map(function (date) {
       return format(date, 'YYYY-MM-DD');
