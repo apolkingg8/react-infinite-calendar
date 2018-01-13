@@ -134,6 +134,7 @@ export default class MonthList extends Component {
             showOverlay,
             theme,
             today,
+            renderDateHint,
         } = this.props;
 
         let {month, year} = months[index];
@@ -159,6 +160,7 @@ export default class MonthList extends Component {
                 style={style}
                 locale={locale}
                 passThrough={passThrough}
+                renderDateHint={renderDateHint}
                 {...passThrough.Month}
             />
         );

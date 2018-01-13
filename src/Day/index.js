@@ -40,6 +40,25 @@ export default class Day extends PureComponent {
       </div>
     );
   }
+
+  renderDateHint = ()=> {
+    var {
+      date,
+      day,
+      year,
+      currentYear,
+      renderDateHint
+    } = this.props
+
+    if(renderDateHint) {
+      return renderDateHint(new Date(date), styles.hint)
+    }
+
+    /*return day === 1 &&
+        currentYear !== year &&
+        <span className={styles.year}>{year}</span>*/
+    return null
+  }
   
   render() {
     const {
@@ -53,6 +72,7 @@ export default class Day extends PureComponent {
       isToday,
       isSelected,
       monthShort,
+      renderDateHint,
       theme: {selectionColor, todayColor},
       year,
     } = this.props;
@@ -82,9 +102,7 @@ export default class Day extends PureComponent {
       >
         {day === 1 && <span className={styles.month}>{monthShort}</span>}
         {isToday ? <span>{day}</span> : day}
-        {day === 1 &&
-          currentYear !== year &&
-          <span className={styles.year}>{year}</span>}
+        {this.renderDateHint()}
         {isSelected && this.renderSelection()}
       </li>
     );

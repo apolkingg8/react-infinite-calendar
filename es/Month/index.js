@@ -43,7 +43,8 @@ var Month = function (_PureComponent) {
         selected = _props.selected,
         today = _props.today,
         theme = _props.theme,
-        passThrough = _props.passThrough;
+        passThrough = _props.passThrough,
+        renderDateHint = _props.renderDateHint;
 
     var currentYear = today.getFullYear();
     var year = monthDate.getFullYear();
@@ -91,7 +92,8 @@ var Month = function (_PureComponent) {
           month: month,
           monthShort: monthShort,
           theme: theme,
-          year: year
+          year: year,
+          renderDateHint: renderDateHint
         }, passThrough.Day));
 
         dow += 1;

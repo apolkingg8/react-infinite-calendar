@@ -22,6 +22,7 @@ export default class Month extends PureComponent {
       today,
       theme,
       passThrough,
+      renderDateHint,
     } = this.props;
     const currentYear = today.getFullYear();
     const year = monthDate.getFullYear();
@@ -71,6 +72,7 @@ export default class Month extends PureComponent {
             monthShort={monthShort}
 						theme={theme}
             year={year}
+                        renderDateHint={renderDateHint}
             {...passThrough.Day}
 					/>
 				);

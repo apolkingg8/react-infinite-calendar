@@ -28,7 +28,8 @@ var styles = {
   'range': 'Cal__Day__range',
   'start': 'Cal__Day__start',
   'end': 'Cal__Day__end',
-  'betweenRange': 'Cal__Day__betweenRange'
+  'betweenRange': 'Cal__Day__betweenRange',
+  'hint': 'Cal__Day__hint'
 };
 
 

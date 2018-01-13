@@ -124,7 +124,8 @@ var MonthList = function (_Component) {
                 selected = _this$props2.selected,
                 showOverlay = _this$props2.showOverlay,
                 theme = _this$props2.theme,
-                today = _this$props2.today;
+                today = _this$props2.today,
+                renderDateHint = _this$props2.renderDateHint;
             var _months$index2 = months[index],
                 month = _months$index2.month,
                 year = _months$index2.year;
@@ -152,7 +153,8 @@ var MonthList = function (_Component) {
                 theme: theme,
                 style: style,
                 locale: locale,
-                passThrough: passThrough
+                passThrough: passThrough,
+                renderDateHint: renderDateHint
             }, passThrough.Month));
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }

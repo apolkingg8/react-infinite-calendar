@@ -282,6 +282,7 @@ export default class Calendar extends Component {
 			tabIndex,
 			width,
       YearsComponent,
+      renderDateHint
 		} = this.props;
     const {
       hideYearsOnSelect,
@@ -366,6 +367,7 @@ export default class Calendar extends Component {
               scrollDate={scrollDate}
               showOverlay={showOverlay}
               width={width}
+              renderDateHint={renderDateHint}
             />
           </div>
           {display === 'years' &&

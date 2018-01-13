@@ -24,8 +24,40 @@ addDecorator(CenterDecorator);
 
 const today = new Date();
 
+/*function makePath() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 50; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+
+    return text;
+}
+
+window.testObj = {path: 'asddasdasd/ad/as/das/d/asd/asdd/asd/sa', rate: 1.544645466546}
+window.testArr = []
+
+for(var i=0; i<100000; i++) {
+    window.testArr.push({
+        path: makePath(),
+        previewPath: makePath(),
+        rate: Math.random(),
+        lat: Math.random(),
+        lng: Math.random(),
+    })
+}*/
+
 storiesOf('Basic settings', module)
     .add('Default Configuration', () => <InfiniteCalendar/>)
+    .add('Date Hint', () => (
+        <InfiniteCalendar
+            renderDateHint={(date, className)=> {
+                var randomNum = Math.floor(Math.random() * 20)
+                return <span className={className}>{randomNum || ''}</span>
+            }}
+        />
+    ))
     .add('Initially Selected Date', () => <InfiniteCalendar selected={addDays(today, 5)}/>)
     .add('Blank Initial State', () => <InfiniteCalendar selected={null}/>)
     .add('Min Date', () => (

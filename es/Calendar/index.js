@@ -47,7 +47,8 @@ var styles = {
     'range': 'Cal__Day__range',
     'start': 'Cal__Day__start',
     'end': 'Cal__Day__end',
-    'betweenRange': 'Cal__Day__betweenRange'
+    'betweenRange': 'Cal__Day__betweenRange',
+    'hint': 'Cal__Day__hint'
   }
 };
 
@@ -303,7 +304,8 @@ var Calendar = function (_Component) {
         selected = _props2.selected,
         tabIndex = _props2.tabIndex,
         width = _props2.width,
-        YearsComponent = _props2.YearsComponent;
+        YearsComponent = _props2.YearsComponent,
+        renderDateHint = _props2.renderDateHint;
 
     var _getDisplayOptions = this.getDisplayOptions(),
         hideYearsOnSelect = _getDisplayOptions.hideYearsOnSelect,
@@ -386,7 +388,8 @@ var Calendar = function (_Component) {
             selected: selected,
             scrollDate: scrollDate,
             showOverlay: showOverlay,
-            width: width
+            width: width,
+            renderDateHint: renderDateHint
           })
         ),
         display === 'years' && React.createElement(YearsComponent, _extends({

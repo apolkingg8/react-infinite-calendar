@@ -13,6 +13,7 @@
 }
 
 .root {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1 / 7 * 100%;
@@ -212,4 +213,16 @@
       }
     }
   }
+}
+
+.hint {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  width: 100%;
+  line-height: 10px;
+  font-size: 10px;
+  color: rgb(104, 159, 56);
 }

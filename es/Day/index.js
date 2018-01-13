@@ -23,7 +23,8 @@ var styles = {
   'range': 'Cal__Day__range',
   'start': 'Cal__Day__start',
   'end': 'Cal__Day__end',
-  'betweenRange': 'Cal__Day__betweenRange'
+  'betweenRange': 'Cal__Day__betweenRange',
+  'hint': 'Cal__Day__hint'
 };
 
 var Day = function (_PureComponent) {
@@ -48,6 +49,23 @@ var Day = function (_PureComponent) {
       if (!isDisabled && typeof onClick === 'function') {
         onClick(parse(date));
       }
+    }, _this.renderDateHint = function () {
+      var _this$props2 = _this.props,
+          date = _this$props2.date,
+          day = _this$props2.day,
+          year = _this$props2.year,
+          currentYear = _this$props2.currentYear,
+          renderDateHint = _this$props2.renderDateHint;
+
+
+      if (renderDateHint) {
+        return renderDateHint(new Date(date), styles.hint);
+      }
+
+      /*return day === 1 &&
+          currentYear !== year &&
+          <span className={styles.year}>{year}</span>*/
+      return null;
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -99,6 +117,7 @@ var Day = function (_PureComponent) {
         isToday = _props2.isToday,
         isSelected = _props2.isSelected,
         monthShort = _props2.monthShort,
+        renderDateHint = _props2.renderDateHint,
         _props2$theme = _props2.theme,
         selectionColor = _props2$theme.selectionColor,
         todayColor = _props2$theme.todayColor,
@@ -130,11 +149,7 @@ var Day = function (_PureComponent) {
         null,
         day
       ) : day,
-      day === 1 && currentYear !== year && React.createElement(
-        'span',
-        { className: styles.year },
-        year
-      ),
+      this.renderDateHint(),
       isSelected && this.renderSelection()
     );
   };
